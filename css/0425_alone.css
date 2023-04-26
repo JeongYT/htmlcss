@@ -1,0 +1,57 @@
+.main {
+    margin:auto;
+    width:800px;
+}
+.main_menu {
+    float:left;
+    background: black;
+    width:150px;
+    text-align:center;
+    height:60px;
+}
+.main_menu a {
+    color:white;
+    padding:20px;
+    display:block;
+}
+.main_menu:hover>.sub{
+    /* display:block; */
+    visibility: visible;
+    opacity: 1;
+    height:245px;
+    transition: 1s;
+}
+.sub, .ssub {
+    visibility: hidden;
+    opacity: 0;
+    /* display:none; */
+    background:white;
+    border:1px solid lightgray;
+    width:200px;
+    text-align: left;
+}
+.sub {
+    height:0;
+}
+.sub a {
+    color:black;
+}
+.sub a:hover {
+    background:black;
+    color:white;
+    transition: 1s;
+}
+.sub_menu:hover>.ssub {
+    /* display:block; */
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+}
+.sub_menu{
+    position:relative;
+}
+.ssub{
+    position: absolute;
+    left:199px;
+    top:-1px;
+}

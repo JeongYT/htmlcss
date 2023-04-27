@@ -1,0 +1,101 @@
+.top {
+    background-color:black;
+    color:white;
+    text-align: center;
+    font-style:italic;
+    padding:3px;
+    box-sizing: border-box;
+}
+.nav {
+    display:flex;
+    justify-content: space-between;
+    /* 양쪽정렬 */
+    align-items: center;
+    /* 세로중앙정렬 */
+    padding:10px;
+    border-bottom:1px solid gray;
+    box-sizing: border-box;
+}
+.nav h1,.nav i {
+    font-size:1.5em;
+}
+.bottom {
+    border-bottom: 1px solid lightgray;
+    position:relative;
+    text-align: center;
+}
+.bottom i {
+    position: absolute;
+    left:5px;
+    top:8px;
+}
+.bottom h2 {
+    font-size:1em;
+    padding:5px;
+    color:gray;
+}
+i {
+    cursor: pointer;
+}
+
+/* 박스 가운데 정렬하기 */
+div.box{
+    width:400px;
+    background-color: pink;
+    height:200px;
+    /* position:relative; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.box p {
+    width:60%;
+    background-color: orangered;
+    height:40%;
+    /* position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%); */
+    line-height:calc(200px*0.4);
+}
+.center{
+    margin:auto;
+}
+.tac{
+    text-align: center;
+}
+.vhcenter {
+    position:absolute;
+    left:50%; 
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+ul {
+    height:40px;
+    background-color: aliceblue;
+    overflow:hidden;
+}
+li {
+    float:left;
+    padding:10px;
+    box-sizing: border-box;
+}
+li>a {
+    display:block;
+
+}
+li:after{
+    content:'';
+    display:block;
+    height:2px;
+}
+.nav2 {
+    display:flex;
+    justify-content: space-between;
+    /* 양쪽정렬 */
+    align-items: center;
+    /* 세로중앙정렬 */
+    padding:10px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,105 @@
+label {
+    /* border:1px solid blue; */
+    width:50px;
+    display:block;
+    margin:20px;
+    cursor: pointer;
+    font-size:30px;
+    text-align: center;
+}
+label span {
+    display:block;
+    height:3px;
+    background-color: blue;
+    border-radius: 2px;
+    margin:3px auto;
+    width:90%;
+}
+/* 박스제어하기 */
+ul{display:none;}
+input:checked+ul{
+    display:block;
+}
+ul>li>a::before{
+    content:'\1F60A';
+}
+
+/* 서브메뉴디자인 및 구현 */
+ul{
+    position:relative;
+    width:250px;
+}
+ul>li{
+    background:green;
+    font-weight: bold;
+    padding:5px;
+    text-indent:20px;
+    box-shadow: 1px 1px 1px 1px white;
+}
+ul>li>a{
+    color:white !important;
+    display:block;
+    padding:10px;
+}
+div.sub{
+    position: absolute;
+    left:100%;
+    top:0;
+}
+ul>li:hover{
+    background-color: limegreen;
+}
+ul>li:hover>a{
+    text-shadow:1px 1px black;
+}
+div.sub{
+    display:none;
+}
+ul>li:hover>div.sub{
+    width:900px;
+    display:flex; 
+    height:100%;
+}
+/* 서브메뉴디자인 */
+
+/* div.sub section{
+    float:left;
+} */
+section>ol {
+    font-size:0.9em;
+    font-weight: normal;
+    color:gray;
+}
+section>h3{
+    font-size:1em;
+    font-weight: normal;
+}
+section {
+    border: 1px solid gray;
+    width:400px;
+}
+section:not(:nth-of-type(1)) {
+    border-left: none;
+}
+h3 {
+    padding:10px;
+}
+ol>li {
+    padding:5px;
+}
+.img {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#img1 {
+    background-image:url('/imgs/SJG.png');
+}
+#img2 {
+    background-image:url('/imgs/cat2.jpg');
+}
+#img3 {
+    background-image: url('/imgs/dochi.jpg');
+}
+#img4 {
+    background-image: url('/imgs/dog2.jpg');
+}

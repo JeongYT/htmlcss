@@ -52,6 +52,6 @@
 }
 .ssub{
     position: absolute;
-    left:199px;
-    top:-1px;
+    left:100%;
+    top:0;
 }

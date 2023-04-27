@@ -1,0 +1,47 @@
+/* 메인 메뉴 css */
+
+.main_menu {
+    background-color:green;
+    width:200px;
+    text-indent: 10px;
+    margin-left:50px;
+}
+.main_menu:first-of-type {
+    margin-top:100px;
+}
+.main_menu:not(:last-of-type) {
+    border-bottom:1px solid greenyellow;
+}
+.main_menu>a {
+    color:white;
+    display:block;
+    padding:10px;
+}
+.main_menu:hover {
+    background-color:white;
+}
+.main_menu:hover>a {
+    color:green;
+}
+.main_menu:hover>.sub{
+    display:block;
+}
+
+.main{
+    position:relative;
+}
+
+.depth2 {
+    border:1px solid;
+    height:418px;
+    position:absolute;
+    left:20%;
+    top:0;
+}
+.depth2_menu {
+    border:1px solid ;
+    height:418px;
+    position: inherit;
+    left:60%
+}
+

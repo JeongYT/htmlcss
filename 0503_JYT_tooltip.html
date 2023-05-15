@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        /* 첫번째꺼 */
+        h1 {
+            margin:10px;
+        }
+        .tooltip_wrap {
+            position:relative;
+            margin:100px;
+        }
+        .tooltip {
+            position:absolute;
+            top: -90px;
+            left: -20px;
+            background-color:orange;
+            padding: 20px 5px;
+            font-size:20px;
+            color:white;
+            visibility: hidden;
+            opacity: 0;
+            transition: 1s;
+        }
+        .tooltip ::before {
+            content: '';
+            display: block;
+            width:0;
+            height:0;
+            border:10px solid transparent;
+            border-top: 10px solid orange;
+            position: absolute;
+            left: 120px;
+            top : 67px;
+        }
+        p:hover~.tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* 두번째꺼 */
+        button {
+            padding:10px;
+            width:150px;
+            border-radius: 8px;
+            box-shadow: 4px 4px darkgray;
+            font-size:16px;
+        }
+        .tooltip2 {
+            position:absolute;
+            background-color: black;
+            color:white;
+            border-radius: 8px;
+            padding:10px;
+            width:200px;
+            height:50px;
+            text-align: center;
+            line-height: 50px;
+            font-size:24px;
+            left:-30px;
+            top:-90px;
+            visibility: hidden;
+            opacity: 0;
+            transition: 1s;
+        }
+        .tooltip2 ::before {
+            content: '';
+            display: block;
+            width:0;
+            height:0;
+            border:10px solid transparent;
+            border-top: 18px solid black;
+            position: absolute;
+            left: 100px;
+            top : 70px;
+        }
+        button:hover~.tooltip2 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .over {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>툴팁의 모양 변경</h1>
+    <div class="tooltip_wrap">
+        <p class="over">여기에 마우스를 올려보세요!</p>
+        <span class="tooltip">
+            <p>위쪽에 나타나는 툴팁입니다!</p>
+        </span>
+    </div>
+    <hr>
+    <div class="tooltip_wrap">
+        <button class="over">Tooltip</button>
+        <span class="tooltip2">
+            <p>Pure CSS!</p>
+        </span>
+        <h1>CSS Only Tooltip</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <style>
+        .swiper {
+            width: 600px;
+            height: 300px;
+        }
+        .img1 {
+            width:590px;
+            height:300px;
+        }
+        .slider>div {
+            background-size: cover;
+        }
+        .bx-wrapper img {
+            width:100%;
+            height:300px;
+        } 
+    </style>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $(".slider").bxSlider();
+      });
+    
+    </script>
+
+</head>
+<body>
+    <h1>이미지 슬라이드 라이브러리 사용하기</h1>
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img class="img1" src="./imgs/SJG.png"></div>
+          <div class="swiper-slide"><img class="img1" src="./imgs/daram.png"></div>
+          <div class="swiper-slide"><img class="img1" src="./imgs/yogurt.jpg"></div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <h1> bxslider 슬라이더 사용하기</h1>
+    <div class="slider">
+        <div><img src="./imgs/SJG.png"></div>
+        <div><img src="./imgs/daram.png"></div>
+        <div><img src="./imgs/dochi.jpg"></div>
+    </div>
+
+   
+    
+
+
+
+
+
+       <script>
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable : true
+                },
+
+                autoplay: {
+                    delay: 2500,
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+        </script>
+</body>
+</html>

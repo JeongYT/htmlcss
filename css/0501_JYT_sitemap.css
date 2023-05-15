@@ -1,0 +1,44 @@
+#header {
+    background-color: rgb(65, 63, 63);
+    color:white;
+    font-size: 14px;
+    padding:10px;
+    margin:5px auto;
+    width:1000px;
+    box-sizing: border-box;
+    
+}
+#sec {
+    width:1000px;
+    margin:auto;
+    height:500px;
+}
+.content {
+    float:left;
+    width:200px;
+    height:500px;
+    box-sizing: border-box;
+    padding:10px;
+}
+.c_title::after {
+    content:'';
+    display:block;
+    height:1px;
+    background-color: lightgray;
+}
+.c_title{
+    line-height: 40px;
+    font-size:15px;
+}
+.list {
+    line-height: 40px;
+    font-size:14px;
+}
+.list2 {
+    font-size:13px;
+    text-indent:10px;
+    line-height: 20px;  
+}
+.list2>a {
+    color:gray;
+}

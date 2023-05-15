@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+footer address {
+      background-color:lightgray;
+      text-align: center;
+      font-style:normal;
+      padding:10px;
+      color:gray;
+}
+

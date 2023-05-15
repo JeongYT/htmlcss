@@ -1,0 +1,123 @@
+.multi{
+    /* column-count:3; */
+    padding:10px;
+    /* column-width: 1px solid #ff0000; */
+    column-rule-color:red;
+    column-gap:20px;
+    column-rule-style: solid;
+    column-rule-width:5px;
+    column-rule:5px dotted blue;
+
+    column-width:120px;
+}
+.multi:hover p{
+    column-span:all;
+}
+
+.charts {
+    display:flex;
+    justify-content: center;
+
+}
+svg {
+    width:220px;
+    height:220px;
+}
+svg circle {
+    /* 면색 */
+    fill:gray;
+    /* 선색 */
+    stroke:orange;
+    /* 선두께 */
+    stroke-width:20;
+    stroke-dasharray: 630;
+    stroke-dashoffset: 50;
+    stroke-linecap: round;
+}
+@keyframes line1 {
+    from { 
+        stroke-dashoffset: 600;
+    }
+    to {
+        stroke-dashoffset: 100;
+    }
+}
+@keyframes line2 {
+    from { 
+        stroke-dashoffset: 500;
+    }
+    to {
+        stroke-dashoffset: 200;
+    }
+}
+@keyframes line3 {
+    from { 
+        stroke-dashoffset: 600;
+    }
+    to {
+        stroke-dashoffset: 300;
+    }
+}
+.chart:nth-child(1) circle {
+    animation : line1 3s forwards infinite;
+}
+/* fowards는 애니메이션 끝에서 정지 */
+.chart:nth-child(2) circle {
+    animation : line2 3s forwards infinite;
+    stroke:yellow;
+}
+.chart:nth-child(3) circle {
+    animation : line3 3s forwards infinite;
+    stroke:yellowgreen;
+}
+
+ul{
+    display:flex;
+    margin:30px;
+}
+ul>li{
+    border:1px solid;
+    text-align: center;
+    text-transform: uppercase;
+    width:500px;
+}
+ul>li>a {
+    padding:10px;
+    display:block;
+}
+
+/* 기본상태에서 영문글자가 나오고 마우스 올리면 한글글자가 나오게 하기 */
+
+.sec {
+    display:none;
+}
+ul>li:hover .sec {
+    display:block;
+}
+ul>li:hover .fir {
+    display:none;
+}
+
+ol {
+    display:flex;
+    margin:30px;
+}
+ol>li {
+    width:100px;
+}
+ol img {
+    width:100px;
+    height:50px;
+}
+ol>li:hover .sec {
+    display:block;
+}
+ol>li:hover .fir {
+    display:none;
+}
+
+
+#chartdiv {
+    width: 100%;
+    height: 500px;
+  }

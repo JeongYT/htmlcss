@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+body {
+    background-color:beige;
+}
+header {
+    width:100%;
+    margin:auto;
+}
+header h1 {
+    text-indent:-999px;
+    background-image: url(../img/logo.png);
+    width:100%;
+    background-repeat: no-repeat;
+    height:74px;
+}
+section {
+    width:100%;
+    margin:auto;
+}
+section>ul {
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+}
+section>ul {
+    width:50%;
+    margin:auto;
+}
+section>ul>li {
+    list-style:none;
+    width:130px;
+    height:130px;
+    margin:10px;
+}
+
+section>ul>li:nth-child(1) {
+    background-image:url(../img/main_btns.png);
+}
+section>ul>li:nth-child(2) {
+    background-image:url(../img/main_btns.png);
+    background-position-x:-130px;
+}
+section>ul>li:nth-child(3) {
+    background-image:url(../img/main_btns.png);
+    background-position-x:-260px;
+}
+section>ul>li:nth-child(4) {
+    background-image:url(../img/main_btns.png);
+    background-position-x:-390px;
+}
+section>ul>li:nth-child(5) {
+    background-image:url(../img/main_btns.png);
+    background-position-x:-520px;
+}
+section>ul>li:nth-child(6) {
+    background-image:url(../img/main_btns.png);
+    background-position-x:-650px;
+}
+section>ul>li>a {
+    display:block;
+    text-indent: -9999px;
+    padding:55px;
+}
+

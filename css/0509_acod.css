@@ -1,0 +1,98 @@
+body {
+    background-color: yellow;
+}
+.box {
+    width:250px;
+    margin:200px auto;
+}
+.box>li {
+    background:rgb(236, 95, 113);
+    border-bottom:1px solid rgb(235, 39, 33);
+}
+.box>li:first-child {
+    border-radius: 10px 10px 0 0 ;
+}
+.box>li:last-child {
+    border-radius: 0 0 10px 10px;
+}
+.box>li>a {
+    display:block;
+    padding:10px;
+    color:white;
+    text-indent: 10px;
+}
+.box div {
+    overflow: hidden;
+}
+.box div p{
+    height:0;
+    transition: 0.5s;
+}
+.box div:target p{
+    height:35px;
+    line-height: 35px;
+    background: rgb(38, 36, 83);
+    text-indent: 15px;
+    padding:5px;
+    border-bottom:1px solid rgb(88, 84, 175);
+}
+.box div:target p a {
+    color:white;
+}
+.box {
+    position:relative;
+}
+.fir::after {
+    content:'';
+    position:absolute;
+    width:0;
+    height:0;
+    border:10px solid transparent;
+    border-top:10px solid rgb(236, 95, 113);
+    right:20px;
+    top:41px;
+    opacity: 0;
+    visibility: none;
+}
+.box #aco1:target .fir::after{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 2s;
+    transition:1s;
+}
+.sec::after {
+    content:'';
+    position:absolute;
+    opacity: 0;
+    visibility: none;
+    width:0;
+    height:0;
+    border:10px solid transparent;
+    border-top:10px solid rgb(236, 95, 113);
+    right:20px;
+    top:83px;
+}
+.box #aco2:target .sec::after{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 2s;
+    transition:1s;
+}
+.thir::after {
+    content:'';
+    position:absolute;
+    opacity: 0;
+    visibility: none;
+    width:0;
+    height:0;
+    border:10px solid transparent;
+    border-top:10px solid rgb(236, 95, 113);
+    right:20px;
+    top:125px;
+}
+.box #aco3:target .thir::after{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 2s;
+    transition:1s;
+}

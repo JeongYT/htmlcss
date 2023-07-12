@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+
+        .ng-font{
+            font-family:'Nanum Gothic','돋움';
+        }
+        p {
+            font-size:30px;
+        }
+
+        body{color:blue;}
+        h2{color:brown !important;}
+
+        p {line-height:1.8;}
+        a {text-decoration: none;}
+        .edited {text-decoration: line-through;}
+
+        h1{
+            font-size:100px;
+            font-family: "Arial Rounded MT";
+        }
+        .shadow1{
+            color:orange;
+            text-shadow: 1px 1px;
+        }
+        .shadow2{
+            text-shadow: 5px 5px 3px #f00;
+        }
+        .shadow3{
+            color:#fff;
+            text-shadow: 7px -7px 5px #000;
+        }
+        p {
+            border: 1px solid #ccc;
+            padding:10px;
+            margin:10px;
+        }
+        .align-left{text-align: left;}
+        .align-right{text-align: right;}
+        .align-center{text-align: center;}
+        .align-justify{text-align: justify;}
+</style>
+</head>
+<body>
+    <p>브라우저 기본 글꼴 사용</p>
+    <p class="ng-font">나눔고딕 웹 폰트 사용</p>
+    <hr>
+    <div id="container">
+        <h2 style="color:green;">이지스퍼블리싱의 미션</h2>
+        <p>사람에게 구체적으로 도움을 주는 책,<br>
+        우리는 열심히 사는 사람들에게 도움이 되고 싶습니다.</p>
+        <p>우리는 책을 출간하기 전에 질문할 것입니다.</p>
+        <p style="color:red; font-style:italic">이 책이 사람들에게 도움이 됩니까?</p>
+    </div>
+    <hr>
+    <p>다양한 기기로 인터넷에 접소할 수 있는 요즘, <br>
+    <span class="edited">HTML4</span>HTML5를 공부해야 할 때입니다.</p>
+    <p><a href="https://html.spec.whatwg.org/" target="_blank"><b>HTML5 표준 규약 살펴보기</b></a></p>
+    <hr>
+    <h1 class="shadow1">HTML5</h1>
+    <h1 class="shadow2">HTML5</h1>
+    <h1 class="shadow3">HTML5</h1>
+    <hr>
+    <p class="align-left">Integer elementum .....</p>
+    <p class="align-right">Integer elementum .....</p>
+    <p class="align-center">Integer elementum .....</p>
+    <p class="align-justify">Integer elementum .....</p>
+</body>
+</html>

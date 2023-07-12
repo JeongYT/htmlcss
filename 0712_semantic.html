@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container ul {
+            border:1px dotted blue;
+        }
+        a[href] {
+            background-color:yellow;
+        }
+        [class ~= "button"]{
+            border:2px solid black;
+            box-shadow: rgba(0,0,0,0.4) 5px 5px;
+        }
+        ul.navi li {
+            float:left;
+            border: solid 3px red;
+            padding:10px;
+            list-style:none;
+        }
+        ul.navi li:first-child{
+            border-top-left-radius: 1em;
+            border-bottom-left-radius: 1em;
+        }
+        /* ul.navi li:last-child{
+            border-top-right-radius: 1em;
+            border-bottom-right-radius: 1em;
+        } */
+        ul.navi li:nth-child(4){
+            border-top-right-radius: 1em;
+            border-bottom-right-radius: 1em;
+        }
+        section.content>h2{
+            clear:both;
+        }
+
+        .skewy:hover{transform:skewy(15deg);}
+        .skexy:hover{transform: skewx(15deg);}
+
+        .tr1{
+            width:100px;
+            height:100px;
+            background-color:blue;
+            border:1px solid black;
+            transition-property: width, height;
+            transition-duration: 2s,1s;
+        }
+        .tr1:hover{
+            width:200px;
+            height:120px;
+        }
+        #box1{
+            background-color:#4cff00;
+            border:1px solid black;
+            animation-name:shape;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            width:100px;
+            height:100px;
+        }
+        #box2{
+            background-color: #8f06b0;
+            border:1px solid black;
+            animation-name: rotate;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            width:100px;
+            height:100px;
+        }
+        @keyframes shape{
+            from{
+                border:1px solid black;
+            }
+            to{
+                border:1px solid black;
+                border-radius: 50%;
+            }
+        }
+        @keyframes rotate {
+            from{
+                transform:rotate(0deg)
+            }
+            to{
+                transform: rotate(45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a>메인 메뉴 : </a></li>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#" class="button">메뉴3</a></li>
+        <li><a href="#" class="flat button">메뉴4</a></li>
+    </ul>
+    <ul class="navi">
+        <li class="home"><a href="#">Home</a></li>
+        <li id="html"><a href="#">HTML5</a></li>
+        <li id="css"><a href="#">CSS3</a></li>
+        <li id="jquery"><a href="#">JQuery</li>
+    </ul>
+    
+    <article>
+        <section class="content">
+            <h2>요안도라 소개</h2>
+            <h3>요안도라는 게스트 하우스(Guest House) 형식의 농어촌 민박입니다.</h3>
+            <p>성산의 날씨는 다음주 내내 높은 구름에 .....</p>
+            <p>오늘은 사진에 보이는 긴 돌담을 따라 .....</p>
+            <p>내일은 두달 여동안 밖거리에 만든 .....</p>
+            <div class="banner">
+                <img src="imgs/sky.jpg" width="700" height="223" alt="요안도라">
+            </div>
+        </section>
+        <section id="container">
+            <header><h1>예약 방법 및 요금</h1></header>
+            <p>요안도라에 예약하려면?</p>
+            <ul>
+                <li>예약 방법
+                    <ul>
+                        <li>직접 통화</li>
+                        <li>문자 남기기</li>
+                    </ul>
+                </li>
+                <li>요금
+                    <ul>
+                        <li>1인 : 40,000원</li>
+                        <li>2인 : 60,000원</li>
+                        <li>3인 : 80,000원</li>
+                        <li>4인 : 100,000원</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </article>
+    <aside class="sidebar">
+        <h3>알립니다</h3>
+        <p>게스트하우스 예약은 전화 070-###-#### .....</p>
+            <img src="imgs/cat.jpg" width="200" height="150">
+            <img src="imgs/dog.jpg" width="200" height="150">
+            <img src="imgs/dochi.jpg" width="200" height="150">
+    </aside>
+    <footer>
+        <address>
+            <p>제주특별자치도 남제주군 성산읍 수산리 000번지</p>
+            <p>yoan##@naver.com</p>
+        </address>
+        <p> Copyright &copy; All rights reserved.</p>
+    </footer>
+
+    <div class="origin">
+        <div class="skewx"><img src="./imgs/HDI.jpg" width="200" height="150"></div>
+    </div>
+    <div class="origin">
+        <div class="skewy"><img src="./imgs/HDI.jpg" width="200" height="150"></div>
+    </div>
+    <div class="origin">
+        <div class="skexy"><img src="./imgs/HDI.jpg" width="200" height="150"></div>
+    </div>
+    <div class="tr1"></div>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>
